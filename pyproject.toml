@@ -1,0 +1,11 @@
+[project]
+name = "tubes-holder"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.rst"
+requires-python = ">=3.14"
+dependencies = [
+    "cadquery>=2.8.0",
+    "cq-editor>=0.7.0",
+    "typeguard>=4.6.0",
+]

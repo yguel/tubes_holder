@@ -37,10 +37,14 @@ Then run the following command also in the cq-editor console:
 
    exec(compile(open(_p).read(), _p, "exec"))
 
-The rendered 3D model should now appear in the cq-editor viewport.
-And the script should have created step and STL files of the 3D model in the project folder under the ``exports/models`` directory.
-
 .. figure:: doc/images/cq_editor_and_model.png
    :name: cq_editor_and_model
    :align: center
    :height: 600px
+
+##########
+3D Models
+##########
+
+The rendered 3D model should now appear in the cq-editor viewport.
+And the script should have created step and STL files of the 3D model in the project folder under the `exports/models folder <https://github.com/yguel/tubes_holder/exports/models>`_ directory.

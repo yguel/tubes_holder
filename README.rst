@@ -48,3 +48,17 @@ Then run the following command also in the cq-editor console:
 
 The rendered 3D model should now appear in the cq-editor viewport.
 And the script should have created step and STL files of the 3D model in the project folder under the `exports/models folder <https://github.com/yguel/tubes_holder/tree/main/exports/models>`_ directory.
+
+###################
+Play with the code
+###################
+
+It is super easy to modify the parameters in `tubes_holder__parameters.py` stored in the class `TubeHolder` and see the changes reflected in the 3D model.
+If you want less holes, walls with different thickness, or other modifications, simply edit the corresponding parameters in `tubes_holder__parameters.py` and re-run the script in cq-editor.
+
+.. literalinclude:: tubes_holder__parameters.py
+   :language: python
+   :caption: Tubes holder parameters
+   :linenos:
+
+The names of the parameters should be self-explanatory.

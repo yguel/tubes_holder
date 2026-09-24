@@ -65,7 +65,7 @@ def holder():
     width = TubeHolder.width
     length = TubeHolder.length
     height = TubeHolder.height
-    wall_thickness = TubeHolder.support_thickness
+    wall_thickness = TubeHolder.wall_thickness
     base = cq.Workplane("XY").box(
         width, length, wall_thickness, centered=(True, True, False)
     )

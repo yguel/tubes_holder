@@ -34,13 +34,13 @@ class TubeHolder:
     All dimensions are in mm if not specified.
     """
 
-    height = 50.0
+    height = 60.0
     tube_height = 100.0
     tube_cap_diameter = 19.0
     tube_diameter = 15.0
-    tube_hole_diameter = tube_diameter + 1.0
+    tube_hole_diameter = tube_diameter + 2.1
     tube_hole_radius = tube_hole_diameter / 2
     nb_holes = 7
     width = 45
     length = tube_hole_diameter * (2 * nb_holes + 1)
-    support_thickness = 5.0
+    wall_thickness = 5.0

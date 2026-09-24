@@ -53,7 +53,7 @@ And the script should have created step and STL files of the 3D model in the pro
 Play with the code
 ###################
 
-It is super easy to modify the parameters in `tubes_holder__parameters.py <https://github.com/yguel/tubeqs_holder/blob/main/path/tubes_holder__parameters.py>`_ stored in the class `TubeHolder` and see the changes reflected in the 3D model.
-If you want less holes, walls with different thickness, or other modifications, simply edit the corresponding parameters in `tubes_holder__parameters.py <https://github.com/yguel/tubeqs_holder/blob/main/path/tubes_holder__parameters.py>`_ and re-run the script in cq-editor.
+It is super easy to modify the parameters in `tubes_holder__parameters.py <https://github.com/yguel/tubeqs_holder/blob/main/tubes_holder__parameters.py>`_ stored in the class `TubeHolder` and see the changes reflected in the 3D model.
+If you want less holes, walls with different thickness, or other modifications, simply edit the corresponding parameters in `tubes_holder__parameters.py <https://github.com/yguel/tubeqs_holder/blob/main/tubes_holder__parameters.py>`_ and re-run the script in cq-editor.
 
 The names of the parameters should be self-explanatory.

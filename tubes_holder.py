@@ -130,7 +130,13 @@ def tube_holder():
     return base
 
 
-str_size = str(TubeHolder.tube_hole_diameter) + "x" + str(TubeHolder.height)
+str_size = (
+    str(TubeHolder.tube_hole_diameter)
+    + "x"
+    + str(TubeHolder.height)
+    + "__nb"
+    + str(TubeHolder.nb_holes)
+)
 full_model_info = [
     {
         "name": "tube_holder_" + str_size,
@@ -149,7 +155,7 @@ if export_stl_step:
 
     ex_path = os.path.join(current_path, "exports", "models")
 
-    sol_pfx = "diamHole_x_h_" + str_size + "_"
+    sol_pfx = "diamHole_x_h__nholes_" + str_size + "_"
 
     tube_holder_base_file_name = sol_pfx + "tube_holder"
 

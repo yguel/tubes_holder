@@ -19,7 +19,9 @@ class Tol:
     """
 
     # General tolerance
-    tol = 0.1
+    e = 0.1
+    # Fit tolerance
+    fit_e = 0.2
 
 
 # ============
@@ -40,7 +42,11 @@ class TubeHolder:
     tube_diameter = 15.0
     tube_hole_diameter = tube_diameter + 2.1
     tube_hole_radius = tube_hole_diameter / 2
-    nb_holes = 7
+    spacing_between_holes = tube_hole_diameter
+    nb_holes = 6
     width = 45
     length = tube_hole_diameter * (2 * nb_holes + 1)
-    wall_thickness = 5.0
+    wall_thickness = 3.0
+    fillet_holes = wall_thickness / 2.0
+    middle_height = 10 - wall_thickness / 2.0
+    fillet_foot = 0.5

@@ -118,6 +118,14 @@ def no_stand_holder():
     return holder
 
 
+def compute_foot_translations():
+    global left_foot_translation, right_foot_translation
+    length = TubeHolder.length
+    wall_thickness = TubeHolder.wall_thickness
+    left_foot_translation = (0, -length / 2 + wall_thickness / 2, 0)
+    right_foot_translation = (0, length / 2 - wall_thickness / 2, 0)
+
+
 def full_stand_holder():
     """
     Create the main holder.
@@ -143,8 +151,7 @@ def full_stand_holder():
         centered=(True, True, False),
     )
     leg_base = leg_base.union(stand)
-    left_foot_translation = (0, -length / 2 + wall_thickness / 2, 0)
-    right_foot_translation = (0, length / 2 - wall_thickness / 2, 0)
+    compute_foot_translations()
     left_leg = leg_base.translate(left_foot_translation)
     right_leg = leg_base.translate(right_foot_translation)
     holder = top.union(middle).union(left_leg).union(right_leg)
@@ -400,15 +407,15 @@ full_model_info = {
         "name": "full_stand_tube_holder_" + str_size,
         "gen": full_stand_tube_holder,
         "color": "blue",
-        "export": True,
-        "display": True,
+        "export": False,
+        "display": False,
     },
     "half_stand_tube_holder": {
         "name": "half_stand_tube_holder_" + str_size,
         "gen": half_stand_tube_holder,
         "color": "green",
-        "export": True,
-        "display": True,
+        "export": False,
+        "display": False,
     },
 }
 
@@ -533,6 +540,7 @@ show_object(box, "middle_selector_box", options={"color": "blue"})
 
 
 def display_feet(cut_shape=None):
+    compute_foot_translations()
     if cut_shape is not None:
         left_foot = gluable_stand_foot().translate(left_foot_translation).cut(cut_shape)
         right_foot = (
@@ -550,8 +558,8 @@ def display_feet(cut_shape=None):
             .translate(right_foot_translation)
             .translate((0, 0, -wall_thickness))
         )
-    show_object(left_foot, "left_foot", options={"color": "pink"})
-    show_object(right_foot, "right_foot", options={"color": "pink"})
+    show_object(left_foot, "left_foot", options={"color": "green"})
+    show_object(right_foot, "right_foot", options={"color": "green"})
 
 
 if SEE_HALF:

@@ -6,7 +6,7 @@ Install using uv
 
 .. code-block:: bash
 
-   uv install
+   uv sync
 
 ###################
 Running the Script

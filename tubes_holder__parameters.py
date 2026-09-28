@@ -42,10 +42,12 @@ class TubeHolder:
     tube_diameter = 15.0
     tube_hole_diameter = tube_diameter + 2.1
     tube_hole_radius = tube_hole_diameter / 2
-    spacing_between_holes = tube_hole_diameter
+    spacing_between_holes = 20.0
     nb_holes = 6
     width = 45
-    length = tube_hole_diameter * (2 * nb_holes + 1)
+    length = (
+        tube_hole_diameter * (nb_holes + 2) + (nb_holes - 1) * spacing_between_holes
+    )
     wall_thickness = 3.0
     fillet_holes = wall_thickness / 2.0
     middle_height = 10 - wall_thickness / 2.0

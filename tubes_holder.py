@@ -268,6 +268,7 @@ def tube_holder(holder_gen=no_stand_holder):
     tube_height = TubeHolder.tube_height
     nb_holes = TubeHolder.nb_holes
     hole_diam = TubeHolder.tube_hole_diameter
+    spacing = TubeHolder.spacing_between_holes
     width = TubeHolder.width
     height = TubeHolder.height
     wall_thickness = TubeHolder.wall_thickness
@@ -275,7 +276,7 @@ def tube_holder(holder_gen=no_stand_holder):
     base = holder_gen()
     hole = tube_hole(tube_height, (0, 0, 0))
     for i in range(nb_holes):
-        tr = (0, hole_diam * (2 * i + 1.5) - length / 2, 0)
+        tr = (0, i * (hole_diam + spacing) + 1.5 * hole_diam - length / 2, 0)
         base = base.cut(hole.translate(tr))
     top_selector = cq.selectors.BoxSelector(
         (width / 2, length / 2 + wall_thickness, height + wall_thickness / 2),

@@ -1,5 +1,5 @@
 # From cq-editor run:
-# _p = '/home/manu/manuLinux/code/sources.yguel/3D_modeling/cadquery/tubes_holder/tubes_holder.py'
+# _p = '/home/student/workspace/examples/cq/tubes_holder/tubes_holder.py'
 # exec(compile(open(_p).read(), _p, "exec"))
 
 import inspect
